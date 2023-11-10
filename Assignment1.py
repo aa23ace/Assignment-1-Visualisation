@@ -136,14 +136,20 @@ def pieChart(df, col_name):
     plt.show()
 
 
-# Creating a dataframe using pandas from CSV file
-df = pd.read_csv(r"heart-disease.csv")
+def main():
+    # Creating a dataframe using pandas from CSV file
+    df = pd.read_csv(r"heart-disease.csv")
 
-# Calling lineplot function with dataframe, x_axis and y_axis values
-linePlot(df, 'age', 'trestbps')
+    # Calling lineplot function with dataframe, x_axis and y_axis values
+    linePlot(df, 'age', 'trestbps')
 
-# Calling barplot function with dataframe, x_axis and y_axis values
-barPlot(df, 'cp', 'target')
+    # Calling barplot function with dataframe, x_axis and y_axis values
+    barPlot(df, 'cp', 'target')
 
-# Calling pieplot function with dataframe and column name as 'restecg'
-pieChart(df, "restecg")
+    # Calling pieplot function with dataframe and column name as 'restecg'
+    pieChart(df, "restecg")
+
+
+if __name__ == "__main__":
+    # Start of the program from here by calling main()
+    main()
